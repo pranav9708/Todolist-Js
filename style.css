@@ -1,0 +1,152 @@
+/* common styling */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    background-color: rgb(144, 141, 141);
+}
+
+.container{
+    background-color: #fff;
+    padding:0.5em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em;
+}
+
+button{
+    background-color: transparent;
+    font-size:1.4rem;
+    color:rgb(109, 106, 106);
+    border:none;
+    outline:none;
+    font-weight: 900;
+    margin:0 0.5em;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+/* addTask container styles */
+
+#add-task-container{
+    background-color:rgb(199, 198, 198);
+    display:flex;
+    border-radius: 0.3em;
+    align-items:center;
+    justify-content: center;
+    width:80vw;
+    height:10vh;
+    max-width: 800px;
+    max-height: 50px;
+}
+
+#add-task-container #input-task{
+    flex:5;
+    border:none;
+    font-size:1.4rem;
+    outline: none;
+    background-color: transparent;
+}
+
+#add-task-container:hover,#add-task-container:focus{
+    background-color:rgb(184, 184, 184);
+}
+
+#add-task:hover, #add-task:focus{
+    color:black;
+    font-size:1.42rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* task shortcuts container styling */
+
+#task-shortcuts{
+    margin-top:0.5em;
+    padding-bottom: 0.5em;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+#task-shortcuts button{
+    color: rgb(184, 184, 184);
+    font-size:0.8rem;
+}
+
+#task-shortcuts button:hover,#task-shortcuts button:focus{
+    color:black;
+    cursor: pointer;
+}
+
+/* task-list-container styling */
+
+#task-list-container{
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.task{
+    width:100%;
+    display:flex;
+    margin:0.5em 0;
+    padding:0.25em 0;
+    justify-content: space-between;
+    font-weight: 600;
+    color:black;
+}
+
+.task:hover{
+    background-color:rgb(232, 229, 229);
+}
+
+.task:hover .deleteTask{
+    opacity:1;
+    color:black;
+}
+
+.task li{
+    flex:4;
+    list-style:none;
+    font-size:1.4rem;
+}
+.task .deleteTask{
+    opacity: 0;
+}
+
+/*task details container*/
+
+#task-details{
+    margin-left: 0.5em;
+    color:rgb(109, 106, 106);
+}
+
+#task-details #no-of-tasks{
+    color:black;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 400px){
+    #add-task-container{
+        width:100%;
+    }
+
+    body{
+        width:100vw;
+        height:100vh;
+    }
+
+    .container{
+        width:90vw;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link for adding fontawesome icons -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/895d93a49b.css" crossorigin="anonymous">
+    <!-- link to main css file -->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <div id="add-task-container">
+            <button id="book-icon"><i class="fa-sharp fa-solid fa-list"></i></button>
+            <input type="text" id="input-task" placeholder="Type your todoList">
+            <button id="add-task"><i class="fa-solid fa-circle-plus"></i></button>
+        </div>
+
+        <div id="task-shortcuts">
+            <button id="complete-all-task"><i class="fa-solid fa-check-double"></i> Complete all tasks</button>
+            <button id="clear-completed">clear completed</button>
+        </div>
+
+        <div id="task-list-container"></div>
+
+        <div id="task-details">
+            <span id="no-of-tasks"></span> tasks left 
+        </div>
+    </div>
+    <!-- fontawesome script file -->
+    <script src="https://kit.fontawesome.com/895d93a49b.js" crossorigin="anonymous"></script>
+    <!-- link to main javascript file -->
+    <script src="toDoList.js"></script>
+</body>
+</html>
