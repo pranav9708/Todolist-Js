@@ -50,7 +50,8 @@ button{
 }
 
 #add-task-container #input-task{
-    max-width:70%;
+    min-width:70%;
+
     flex:5;
     border:none;
     font-size:1.4rem;
@@ -117,6 +118,10 @@ button{
 
 .task li{
     flex:4;
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px; 
+    word-break: break-all;
     list-style:none;
     font-size:1.4rem;
 }
