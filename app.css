@@ -1,0 +1,187 @@
+/* variables for css */
+:root {
+    --primary-color:rgb(100, 100, 100);
+    --primary-highlight-color: rgb(186, 185, 185);
+    --primary-background-color:white;
+    --secondary-highlight-color:rgb(15, 14, 14);
+}
+
+/* common styling */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    font-size:1.4rem;
+    background-color: var(--primary-highlight-color);
+}
+
+#app-container{
+    background-color: var(--primary-background-color);
+    padding:0.7em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em;
+    width:80%;
+    max-width:700px;
+}
+
+button{
+    background-color: transparent;
+    color:var(--primary-color);
+    border:none;
+    outline:none;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin:0 0.5em;
+}
+
+button:hover,button:focus{
+    color:black;
+    font-size:1.42rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input{
+    border:none;
+    outline:none;
+    background-color: transparent;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+/* add task container css */
+#add-task-container{
+    background-color: var(--primary-highlight-color);
+    padding:0.5em 0;
+    display:flex;
+    margin-bottom:1em;
+}
+
+#add-task-container #input-task{
+    flex:4;
+    font-size: 1.6rem;
+}
+
+/* task shortcuts css */
+
+#task-shortcuts{
+    display:flex;
+    justify-content: space-between;
+    border-top:1px solid var(--primary-highlight-color);
+    border-bottom:1px solid var(--primary-highlight-color);
+    padding:0.5em 0;
+}
+
+#task-shortcuts button{
+    font-size:1rem;
+}
+
+#task-shortcuts:hover{
+    background-color: var(--primary-highlight-color);
+}
+
+/* task list container css */
+
+#task-list-container{
+    margin:0.5em 0;
+}
+
+.task{
+    display:flex;
+}
+
+.task:hover{
+    background-color: var(--primary-highlight-color);
+}
+.content-container{
+    flex:3;
+}
+.content-container .task-content{
+    font-size: 1.6rem;
+    text-decoration: inherit;
+    color:inherit;
+}
+
+.content-container .task-date{
+    font-size:0.8rem;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 0.2;
+    margin:0.5em 0;
+}
+
+.task input[type="checkbox"]{
+    display:none;
+}
+
+.bubble{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0.5em 0.2em;
+    margin-right: 0.5em;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:2px solid var(--primary-color)
+}
+
+.bubble::after{
+    content:"";
+    display:block;
+    background-color: var(--secondary-highlight-color);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .bubble::after{
+    width:10px;
+    height:10px;
+    opacity:1;
+}
+
+/* task-details css */
+
+#task-details{
+    font-size:1rem;
+    border-top:1px solid var(--primary-highlight-color);
+    margin-top:0.5em;
+    padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 570px){
+
+    #app-container{
+        width:95%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .content-container .task-content{
+        font-size: 1.1rem;
+    }
+
+    button{
+        font-size: 1.1rem;
+    }
+    button:hover{
+        font-size:1.2rem;
+    }
+
+    #task-shortcuts button{
+        font-size:0.9rem;
+    }
+
+    #add-task-container #input-task{
+        font-size:1.2rem;
+    }
+}
