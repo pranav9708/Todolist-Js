@@ -110,6 +110,7 @@ input{
     font-size: 1.6rem;
     text-decoration: inherit;
     color:inherit;
+    word-wrap: break-word;
 }
 
 .content-container .task-date{
@@ -168,8 +169,18 @@ input:checked ~ .bubble::after{
 @media only screen and (max-width:500px){
     .content-container .task-content{
         font-size: 1rem;
+        width:100%;
     }
 
+    .content-container{
+        max-width: 50%;
+    }
+    .editTask{
+        font-size: 1rem;
+    }
+    .editTask:hover{
+        font-size: 1.05rem;
+    }
     button{
         font-size: 1.1rem;
     }
