@@ -112,6 +112,7 @@ input{
     text-decoration: inherit;
     color:inherit;
     word-wrap: break-word;
+    width:95%;
 }
 
 .content-container .task-date{
