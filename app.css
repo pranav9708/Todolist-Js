@@ -173,7 +173,7 @@ input:checked ~ .bubble::after{
     }
 
     .content-container{
-        max-width: 50%;
+        max-width: 60%;
     }
     .editTask{
         font-size: 1rem;
