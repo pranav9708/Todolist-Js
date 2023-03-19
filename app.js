@@ -94,6 +94,7 @@ function DisplayToDos(){
 
         if(todo.done){
             content.classList.add("line-through");
+            count--;
         }
 
         //checkbox function
@@ -103,8 +104,10 @@ function DisplayToDos(){
 
             if(todo.done){
                 content.classList.add("line-through");
+                count--;
             }else{
-                content.classList.add("line-through");
+                content.classList.remove("line-through");
+                count++;
             }
 
             DisplayToDos();
