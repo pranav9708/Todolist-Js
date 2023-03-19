@@ -17,17 +17,23 @@ window.addEventListener('load',()=>{
 })
 
 submitBtn.addEventListener('click',()=>{
+    //checking if user has entered empty task
     if(inputTask.value.trim().length>0){
 
+        //generating date in the format day month year format
         const date = new Date();
         const options = { day: 'numeric', month: 'long', year: 'numeric' };
         const formattedDate = date.toLocaleDateString('en-US', options);
+
+        //creating the todo object
         const todo={
             content: inputTask.value,
             done:false,
             createdAt: formattedDate,
         }
         todos.push(todo);
+
+        //storing object to local storage
         localStorage.setItem('todos',JSON.stringify(todos));
 
     }else{
@@ -40,6 +46,7 @@ submitBtn.addEventListener('click',()=>{
 
 
 function DisplayToDos(){
+    
     taskList.innerHTML='';
     let count=0;
     todos.forEach(todo=>{
