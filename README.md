@@ -1,4 +1,4 @@
-Todo List App
+#Todo List App
 
 This is a simple Todo List app that allows users to store their tasks using local storage. The purpose of this project is to strengthen my knowledge of HTML, CSS, and JavaScript.
 
